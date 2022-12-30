@@ -1,6 +1,12 @@
 /* FUENTES */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Raleway:wght@300&display=swap");
 
+
+body {
+    background-color: #FAF1E8;
+    font-family: "Josefin Sans", sans-serif;
+}
+
 /* HEADER  */
 header {
     display: flex;
@@ -18,11 +24,11 @@ header {
     width: 30%;
     padding-top: 5px;
 }
+
 /* NAV */
 nav {
     background-color: #a9c0ab;
     text-transform: uppercase;
-    font-family: "Josefin Sans", sans-serif;
 }
 
 .nav-link {
@@ -112,46 +118,66 @@ nav {
 
 /* SEPARADOR */
 .separador {
-    position: relative;
-    background: #a9c0ab;
-    height: 20vh;
-}
-
-.wave {
-    position: absolute;
-    height: 63px;
-    width: 100%;
-    background: #a9c0ab;
-    bottom: 0;
-}
-
-.wave::before,
-.wave::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-}
-
-.wave::before {
-    width: 55%;
-    height: 109%;
-    background-color: #fff;
-    right: -1.5%;
-    top: 60%;
-}
-
-.wave::after {
-    width: 55%;
-    height: 100%;
+    height: 5rem;
     background-color: #a9c0ab;
-    left: -1.5%;
-    top: 40%;
+
 }
 
-/* MEDIA VISTA MOBILE
-@media (max-width: 699px) {
-    .header {
-        display: none;
-    }
-} */
+/* BENEFICIOS */
+.imgBenef {
+    width: 20%;
+    display: block;
+    margin: auto;
+}
+
+.beneficios {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.txtBenef {
+    text-align: center;
+    color: #d1a9c8;
+    font-weight: 700;
+}
+
+pBenef {
+    text-align: center;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #a9c0ab;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li img {
+    width: 40px;
+    height: 40px;
+    transition: height 0.5s, width 0.5s;
+    margin: 2rem;
+}
+
+footer ul li img:hover {
+    width: 50px;
+    height: 50px;
+}
+
+footer p{
+    color: #ffff;
+}
+
+.logoFooter{
+    width: 10%;
+    margin: 1rem;
+}
