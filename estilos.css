@@ -1,0 +1,157 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Raleway:wght@300&display=swap");
+
+/* HEADER  */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #a9c0ab;
+}
+
+
+.logoPrincipal {
+    width: 15%;
+    padding-top: 5px;
+}
+
+.logoNav {
+    width: 30%;
+    padding-top: 5px;
+}
+/* NAV */
+nav {
+    background-color: #a9c0ab;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.nav-link {
+    color: #ffff;
+}
+
+.nav-item :hover {
+    color: #e6e4d8;
+}
+
+/* CARRUSEL */
+
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.2;
+}
+
+.carousel-caption {
+    font-family: "Josefin Sans", sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h5 {
+    font-size: 50px;
+    font-weight: 700px;
+}
+
+/* BOTON CARRUSEL */
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: #e6e4d8;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* SEPARADOR */
+.separador {
+    position: relative;
+    background: #a9c0ab;
+    height: 20vh;
+}
+
+.wave {
+    position: absolute;
+    height: 63px;
+    width: 100%;
+    background: #a9c0ab;
+    bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+
+.wave::before {
+    width: 55%;
+    height: 109%;
+    background-color: #fff;
+    right: -1.5%;
+    top: 60%;
+}
+
+.wave::after {
+    width: 55%;
+    height: 100%;
+    background-color: #a9c0ab;
+    left: -1.5%;
+    top: 40%;
+}
+
+/* MEDIA VISTA MOBILE
+@media (max-width: 699px) {
+    .header {
+        display: none;
+    }
+} */
