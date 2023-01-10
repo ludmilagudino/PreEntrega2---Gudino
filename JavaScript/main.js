@@ -49,6 +49,50 @@ const productos = [
     },
 ];
 
+const nuevasFragancias = [
+    {
+        nombre: "PEPINO",
+        img: "../imagenes/nuevas fragancias/1.jpg"
+    },
+    {
+        nombre: "CITRUS",
+        img: "../imagenes/nuevas fragancias/2.jpg"
+    },
+    {
+        nombre: "BAMBOO",
+        img: "../imagenes/nuevas fragancias/3.jpg"
+    },
+    {
+        nombre: "CEDRO",
+        img: "../imagenes/nuevas fragancias/4.jpg"
+    },
+    {
+        nombre: "LIMA",
+        img: "../imagenes/nuevas fragancias/5.jpg"
+    },
+
+
+]
+
+//CREACION CARRUSEL POR PRODUCTO
+const carrusel = document.getElementById('containerCards');
+
+nuevasFragancias.forEach((fragancia) => {
+    const {nombre, img } = fragancia;
+    carrusel.innerHTML += `
+    <div class="card">
+    <img class="image" src="${img}" alt="Card image cap">
+        <h2 class="title">${nombre}</h2>
+    </div>
+`;
+});
+
+
+
+
+
+
+
 const contenedor = document.getElementById('contenidoTienda');
 
 //CREACION DE CARDS POR PRODUCTO
