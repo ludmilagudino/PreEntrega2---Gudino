@@ -126,6 +126,7 @@ nav {
     text-align: center;
 }
 
+
 .fragancias {
     display: flex;
     flex-wrap: wrap;
@@ -152,11 +153,65 @@ nav {
     border-color: #ffffff;
 }
 
-/* SOBRE NOSOTROS INDEX */
-.imgVelas{
-    width: fit-content;
+.hrFragancias {
+    width: 25%;
+    margin: auto;
+    padding-bottom: 1rem;
 }
 
+
+/* SOBRE NOSOTROS INDEX */
+.imgVelas{
+    width: 40%;
+}
+
+.sobreNosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoSobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+}
+
+.textoSobre h3{
+    padding-top: 1rem;
+}
+
+hr {
+    width: 50%;
+}
+
+/* GALERIA INDEX */
+.galeria{
+    background-color: #e3e3e1;
+}
+
+.galeria h3{
+    padding: 1rem;
+}
+
+.imagenesGaleria{
+    width: 70%;
+}
+
+.hrGaleria {
+    width: 40%;
+    margin: auto;
+}
+
+.botonWhatsApp img {
+    width: 4rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px; }
 
 
 /* TIENDA */
