@@ -78,44 +78,83 @@ const nuevasFragancias = [
 const nuevas = document.getElementById("nuevasFragancias");
 
 nuevasFragancias.forEach((frag) => {
-    const { fragancia, imagen } = frag;
-    if (nuevas != null){
-      nuevas.innerHTML += 
-      `<div class="card mt-2 fraganciasCards" style="width: 15rem;">
+  const { fragancia, imagen } = frag;
+  if (nuevas != null) {
+    nuevas.innerHTML +=
+      `<div data-aos="flip-left" data-aos-duration="1000" class="card mt-2 fraganciasCards" style="width: 15rem;">
               <img class="card-img-top " src="${imagen}" alt="nueva fragancia">
               <div class="card-body">
               <h5 class="card-title">${fragancia}</h5>
   
               </div>
           </div>
-      `;      
-    }
+      `;
+  }
 });
 
 
 
-//CREACION DE CARDS POR 
-const contenedor = document.getElementById("contenidoTienda");
+//CREACION DE CARDS POR PRODUCTO
+let contenedor = document.getElementById("contenidoTienda");
 
 productos.forEach((prod) => {
-    const { id, nombre, precio, img } = prod;
-    if (contenedor != null){
-    contenedor.innerHTML += 
-    `<div class="card mt-5" style="width: 18rem;">
-            <img class="card-img-top " src="${img}" alt="Card image cap">
-            <div class="card-body">
-            <h5 class="card-title">${nombre}</h5>
-            <p class="card-text">$ ${precio}</p>
 
+  const { id, nombre, precio, img } = prod;
 
-            <button onclick="agregarProductos(${id})" class = "btn btn-primary"> Agregar al carrito</button>
-            </div>
-        </div>
+  let contenido = document.createElement("div");
+  contenido.className = "card";
+  
+  if (contenedor != null) {
+    contenido.innerHTML =
+    `<img class="card-img-top " src="${img}" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title">${nombre}</h5>
+      <p class="card-text">$ ${precio}</p>
     `;
-    }
+
+    contenedor.append(contenido);
+
+    let comprar = document.createElement("button");
+    comprar.innerHTML = "Agregar al carrito";
+    comprar.className = "buttonIndex buttonTienda";
+  
+    contenido.append(comprar);
+
+  }
 });
 
-//AGREGAR AL CARRITO
-function agregarProductos(id) {
-    console.log(id);
-}
+
+
+
+// productos.forEach((prod) => {
+//     const { id, nombre, precio, img } = prod;
+//     if (contenedor != null){
+//     contenedor.innerHTML +=
+//     `<div class="card mt-5" style="width: 18rem;">
+//             <img class="card-img-top " src="${img}" alt="Card image cap">
+//             <div class="card-body">
+//             <h5 class="card-title">${nombre}</h5>
+//             <p class="card-text">$ ${precio}</p>
+
+
+//             <button onclick="agregarProductos()" class = "btn btn-primary"> Agregar al carrito</button>
+//             </div>
+//         </div>
+//     `;
+//     }
+// });
+
+
+
+// //AGREGAR AL CARRITO
+// let carrito = [];
+
+// function agregarProductos() {
+//     carrito.push({
+//       id : productos.id,
+//       img: productos.img,
+//       nombre: productos.nombre,
+//       precio: productos.precio
+// });
+// console.log(carrito);
+// }
