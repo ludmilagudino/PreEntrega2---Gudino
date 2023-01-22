@@ -52,23 +52,23 @@ const productos = [
 const nuevasFragancias = [
   {
     fragancia: "PEPINO",
-    imagen: "../imagenes/nuevas fragancias/1.jpg",
+    imagen: "./imagenes/nuevas fragancias/1.jpg",
   },
   {
     fragancia: "CITRUS",
-    imagen: "../imagenes/nuevas fragancias/2.jpg",
+    imagen: "./imagenes/nuevas fragancias/2.jpg",
   },
   {
     fragancia: "BAMBOO",
-    imagen: "../imagenes/nuevas fragancias/3.jpg",
+    imagen: "./imagenes/nuevas fragancias/3.jpg",
   },
   {
     fragancia: "CEDRO",
-    imagen: "../imagenes/nuevas fragancias/4.jpg",
+    imagen: "./imagenes/nuevas fragancias/4.jpg",
   },
   {
     fragancia: "LIMA",
-    imagen: "../imagenes/nuevas fragancias/5.jpg",
+    imagen: "./imagenes/nuevas fragancias/5.jpg",
   },
 ];
 
@@ -96,10 +96,11 @@ nuevasFragancias.forEach((frag) => {
 
 //CREACION DE CARDS POR PRODUCTO
 let contenedor = document.getElementById("contenidoTienda");
+let carrito = [];
 
 productos.forEach((prod) => {
 
-  const { id, nombre, precio, img } = prod;
+  const {nombre, precio, img } = prod;
 
   let contenido = document.createElement("div");
   contenido.className = "card";
@@ -120,29 +121,29 @@ productos.forEach((prod) => {
   
     contenido.append(comprar);
 
+    comprar.addEventListener("click", () => {
+      carrito.push({
+        id : productos.id,
+        img: productos.img,
+        nombre: productos.nombre,
+        precio: productos.precio
+
+      })
+    })
   }
+
+  //AGREGAR AL CARRITO
+  
+  
 });
 
 
 
 
-// productos.forEach((prod) => {
-//     const { id, nombre, precio, img } = prod;
-//     if (contenedor != null){
-//     contenedor.innerHTML +=
-//     `<div class="card mt-5" style="width: 18rem;">
-//             <img class="card-img-top " src="${img}" alt="Card image cap">
-//             <div class="card-body">
-//             <h5 class="card-title">${nombre}</h5>
-//             <p class="card-text">$ ${precio}</p>
 
 
-//             <button onclick="agregarProductos()" class = "btn btn-primary"> Agregar al carrito</button>
-//             </div>
-//         </div>
-//     `;
-//     }
-// });
+
+
 
 
 
